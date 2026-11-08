@@ -29,6 +29,19 @@
 .ticker-group>span{flex:none}
 }
 @media(prefers-reduced-motion:reduce){.ticker{overflow-x:auto}.ticker-inner{animation:none!important;will-change:auto}}
+
+/* Center the frankfurt illustration in the circular hero decoration on phones. */
+@media(max-width:760px){
+ .hero-art{position:relative;overflow:hidden}
+ .hero-art:after{position:absolute;left:50%;top:52%;width:min(78vw,340px);transform:translate(-50%,-50%)}
+ .hero-art>img{position:absolute;left:50%;top:52%;width:min(109%,580px);height:auto;max-width:none;transform:translate(-50%,-50%) rotate(-3deg);animation:hero-float-centered 6s ease-in-out infinite}
+ @keyframes hero-float-centered{0%,100%{transform:translate(-50%,-50%) rotate(-3deg)}50%{transform:translate(-50%,calc(-50% - 7px)) rotate(-2deg)}}
+}
+@media(max-width:390px){
+ .hero-art:after{width:min(78vw,275px)}
+ .hero-art>img{width:min(110%,520px)}
+}
+@media(prefers-reduced-motion:reduce){.hero-art>img{animation:none!important}}
 </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "El Frankfurt de l’Orfeó", "address": {"@type": "PostalAddress", "streetAddress": "Carrer de Jacint Verdaguer, 5", "addressLocality": "Vic", "postalCode": "08500", "addressRegion": "Barcelona", "addressCountry": "ES"}, "telephone": "+34938853363", "servesCuisine": ["Frankfurts", "Entrepans", "Hamburgueses"], "sameAs": ["https://www.instagram.com/elfrankfurtdelorfeo/"], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "08:00", "closes": "15:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "17:00", "closes": "23:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "18:00", "closes": "23:00"}]}</script>
   
